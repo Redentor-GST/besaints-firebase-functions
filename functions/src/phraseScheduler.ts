@@ -17,7 +17,10 @@ export default async () => {
   const dbUsers = await users.where("shouldSendNotifications", "==", true).get() as unknown as User[];
   dbUsers.forEach((user) => {
     const dateTriggered = isDateTriggered(user.dateTrigger);
-    console.log(dateTriggered)
+    if (dateTriggered) {
+      console.log(`Sending notification to ${user.deviceToken}`);
+      // TODO send notification using device token
+    }
   });
 }
 

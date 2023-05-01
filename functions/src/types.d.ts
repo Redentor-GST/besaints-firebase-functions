@@ -7,4 +7,5 @@ export interface DateTrigger {
 export interface User {
   shouldSendNotifications: boolean;
   dateTrigger: DateTrigger;
+  deviceToken: string;
 }
