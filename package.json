@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "dayjs": "^1.11.7",
+    "firebase-admin": "^11.7.0"
+  }
+}
